@@ -1,0 +1,181 @@
+<InputButton@Button>
+    color: [1, 1, 1, 1]
+    font_size: '18sp'
+    on_press: app.input_button_press(self.text)
+
+<FunctionPanel>
+    size_hint: (1, None)
+    height: dp(50)
+    rows: 2
+    Widget:
+        color: [0, 0, 0, 1]
+        size_hint: (1, None)
+        height: dp(5)
+        canvas:
+            Color:
+                rgba: [1, 0, 0, 1]
+            Rectangle:
+                pos: (0, dp(root.top - self.height))
+                size: (dp(self.width), dp(self.height))
+    GridLayout:
+        cols: 3
+        Label:
+            size_hint: (0.6, 1)
+            text: 'X-(factorial(5))'
+            color: [0, 0, 0, 1]
+        GridLayout:
+            size_hint: (0.3, 1)
+            cols: 3
+            TextInput:
+            TextInput:
+            TextInput:
+        TextInput:
+            size_hint: (0.1, 1)
+
+<MathGraphicsLayout>
+    id: base_box_layout
+    orientation: 'horizontal'
+    Label:
+        id: graphics_label
+        size_hint: (0.75, 1)
+        color: [0, 0, 0, 1]
+    BoxLayout:
+        id: control_box_layout
+        size_hint: (0.25, 1)
+        orientation: 'vertical'
+        ScrollView:
+            id: functions_scroll_view
+            do_scroll_x: False
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint: (1, None)
+                height: len(self.children) * 50
+                FunctionPanel:
+                FunctionPanel:
+                FunctionPanel:
+                FunctionPanel:
+                FunctionPanel:
+                FunctionPanel:
+                FunctionPanel:
+                FunctionPanel:
+                FunctionPanel:
+                FunctionPanel:
+                FunctionPanel:
+                FunctionPanel:
+                FunctionPanel:
+                FunctionPanel:
+                FunctionPanel:
+                FunctionPanel:
+
+        GridLayout:
+            id: input_box_layout
+            rows: 3
+            GridLayout:
+                size_hint: (1, 0.57)
+                cols: 2
+                GridLayout:
+                    size_hint: (0.5, 1)
+                    cols: 3
+                    InputButton:
+                        id: input_7_button
+                        text: '7'
+                    InputButton:
+                        id: input_8_button
+                        text: '8'
+                    InputButton:
+                        id: input_9_button
+                        text: '9'
+                    InputButton:
+                        id: input_4_button
+                        text: '4'
+                    InputButton:
+                        id: input_5_button
+                        text: '5'
+                    InputButton:
+                        id: input_6_button
+                        text: '6'
+                    InputButton:
+                        id: input_1_button
+                        text: '1'
+                    InputButton:
+                        id: input_2_button
+                        text: '2'
+                    InputButton:
+                        id: input_3_button
+                        text: '3'
+                    InputButton:
+                        id: input_point_button
+                        text: '.'
+                    InputButton:
+                        id: input_0_button
+                        text: '0'
+                    InputButton:
+                        id: input_x_button
+                        text: 'X'
+                GridLayout:
+                    size_hint: (0.5, 1)
+                    rows: 2
+                    GridLayout:
+                        size_hint: (1, 0.75)
+                        cols: 3
+                        InputButton:
+                            id: input_plus_button
+                            text: '+'
+                        InputButton:
+                            id: input_multiply_button
+                            text: '×'
+                        InputButton:
+                            id: input_power_button
+                            text: '^'
+                        InputButton:
+                            id: input_minus_button
+                            text: '−'
+                        InputButton:
+                            id: input_divide_button
+                            text: '÷'
+                        InputButton:
+                            id: input_root_button
+                            text: '√'
+                        InputButton:
+                            id: input_logarithm_button
+                            text: 'log'
+                        InputButton:
+                            id: input_left_bracket_button
+                            text: '('
+                        InputButton:
+                            id: input_right_bracket_button
+                            text: ')'
+                    InputButton:
+                        id: input_factorial_button
+                        size_hint: (1, 0.25)
+                        text: 'factorial'
+            GridLayout:
+                size_hint: (1, 0.43)
+                cols: 3
+                InputButton:
+                    id: input_sin_button
+                    text: 'sin'
+                InputButton:
+                    id: input_cos_button
+                    text: 'cos'
+                InputButton:
+                    id: input_arcsin_button
+                    text: 'arcsin'
+                InputButton:
+                    id: input_sinh_button
+                    text: 'sinh'
+                InputButton:
+                    id: input_cosh_button
+                    text: 'cosh'
+                InputButton:
+                    id: input_arccos_button
+                    text: 'arccos'
+                InputButton:
+                    id: input_arcsinh_button
+                    text: 'arcsinh'
+                InputButton:
+                    id: input_arccosh_button
+                    text: 'arccosh'
+                InputButton:
+                    id: erase_button
+                    text: '<ERASE>'
